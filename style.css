@@ -1,0 +1,304 @@
+:root {
+    --color-fondo: #cd9e6f; 
+    --color-primary: #c08b5c ;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #f5d5b5;
+    --color-button: #4c2b1f;
+    --color-button-hover: #8f543e;
+    --color-text: #444444;
+    --color-white: #a8714a;
+    --color-borde: #784b2f;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-tertiary); /* Color de fondo base */
+    background-image: 
+      linear-gradient(to right, var(--color-fondo) 4px, transparent 4px),
+      linear-gradient(to bottom, var(--color-fondo) 4px, transparent 4px);
+    background-size: 50px 50px; /* Tamaño del patrón de cuadrícula */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+/* Banner */
+.header-banner {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinear elementos en el centro */
+    padding: 40px 0 0; /* Espaciado interno */
+    top: 50%; /* Posición en la pantalla */
+    left: 50%; /* Posición en la pantalla */
+    transform: translate(24%, -43%); /* Centrar en la pantalla */
+}
+
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-primary);
+    border: 9px solid var(--color-borde);
+    display: flex; /* Alinear elementos en columna */
+    flex-direction: column;
+    align-items: center;
+    padding: 80px; /* Espaciado interno */
+    width: 45%; /* Ancho total */
+    position: absolute;
+    top: 50%; /* Posición en la pantalla */
+    left: 25%; /* Posición en la pantalla */
+    transform: translate(-47%, -50%); /* Centrar en la pantalla */
+}
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: 'Press Start 2P';
+    font-weight: 700; /* Grosor de la fuente */
+    font-style: italic; /* Estilo de la fuente */
+    color: var(--color-button);
+    top: 50%; /* Posición en la pantalla */
+    left: 50%; /* Posición en la pantalla */
+    transform: translate(45%, 30%);
+    
+}
+
+.section-title {
+    font-family: 'Press Start 2P';
+    font-size: 33px; /* Tamaño de la fuente */
+    font-weight: 600; /* Grosor de la fuente */
+    color: var(--color-button);
+    margin: 10px 0;
+    text-align: center;
+    
+}
+
+.section-subtitle{
+    font-family: 'Press Start 2P';
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    color: var(--color-secondary);
+    margin: 10px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    font-family: 'press start 2p';
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-borde);
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    font-family: 'press start 2p';
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Alinea los botones al centro */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio arriba si es necesario */
+    width: 300px; /* Ancho total */
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid var(--color-borde);
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: 'Press Start 2P';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px; /* Espaciado interno */
+    font-family: 'Press Start 2P'; /* Fuente de texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: 7px solid var(--color-borde); /* Grosor del borde */
+    border-radius: 25px; /* Radio de borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+.button-add {
+    background-color: var(--color-button-hover);
+    color: var(--color-tertiary);
+    border-radius: 0 25px 25px 0;
+    
+}
+
+.button-add:hover {
+    background-color: var(--color-button);
+}
+
+/* Listas */
+ul {
+    list-style-type: none; 
+    color: var(--color-tertiary); /* Color de texto */
+    font-family: 'Press Start 2P';
+    font-size: 15px;  /* Tamaño de la fuente */
+    display: flex; /* Alinear elementos en fila */
+    flex-wrap: wrap; /* Permite que los cuadros se acomoden en varias líneas */
+    gap: 10px; /* Espaciado entre los cuadros */
+    padding: 0;  
+    width: 90%; /* Ancho total */
+}
+    
+ul li {
+    background-color: var(--color-primary); /* Ajusta según tu diseño */
+    border: 6px solid var(--color-borde); /* Borde para destacar los cuadros */
+    padding: 15px; /* Espaciado interno */
+    text-align: center;
+    min-width: 150px; /* Ancho mínimo */
+}
+
+
+#listaAmigos {
+    position: absolute; 
+    left: 110%; /* Ajusta la posición horizontal */
+    right: -900px; /* Ajusta el margen derecho según necesites */
+    top: 100px; /* Ajusta la posición vertical */
+    display: flex; /* Alinear elementos en fila */
+    flex-wrap: wrap; /* Permite que los cuadros se acomoden en varias líneas */
+    gap: 40px; /* Espaciado entre los cuadros */    
+}
+
+.delete-btn {
+    background: none;/* Fondo transparente */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    font-size: 15px; 
+    margin-left: 10px; /* Espacio a la izquierda */
+    color: var(--color-secondary);
+    border: none; /* Sin borde */
+    max-width: 2px; 
+}
+.delete-btn:hover {
+    color: var(--color-button);
+}
+
+
+
+
+
+.result-list {
+    margin-top: 15px; /* Espacio arriba */
+    color: #05DF05; /* Color de texto */
+    font-size: 22px; /* Tamaño de la fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    text-align: center; /* Alinear texto al centro */
+    font-family: 'Press Start 2P';
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    padding: 10px 40px; /* Espaciado interno */
+    color: var(--color-button);
+    background-color: var(--color-tertiary);
+    font-size: 16px;
+    margin-top: 35px;
+}
+
+.button-draw img {
+    margin-right: 40px;
+    
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-ok {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #68a9e7;
+    color: var(--color-secondary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'press start 2p';
+    
+}
+
+#mensaje {
+    font-family: "Press Start 2P";
+    font-size: 14px; /* Ajusta el tamaño según necesites */
+    text-align: center;
+    padding: 10px;
+    
+}
+
+#modal {
+    font-family: "Press Start 2P";
+}
+
+.button-reset {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-button);
+    background-color: var(--color-tertiary);
+    font-size: 16px;
+    margin-top: 35px;
+}
+
+.button-reset img {
+    margin-right: 40px;
+}
+
+.button-reset:hover {
+    background-color: var(--color-button-hover);
+}
+
